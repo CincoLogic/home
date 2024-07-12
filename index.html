@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CincoLogic</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional inline styles for specific adjustments */
+        #home, #about {
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+        }
+        #home h1, #home h2, #about h2, #about p {
+            position: relative;
+            z-index: 1;
+        }
+        #home:before, #about:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        #contact {
+            text-align: center;
+            padding: 2rem;
+        }
+        #contact img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+            margin-bottom: 1rem;
+        }
+        .mission {
+            font-family: Arial, sans-serif;
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin: 2rem auto 3rem; /* Adjusted margin to create more space */
+            max-width: 800px;
+        }
+        .services {
+            font-family: Arial, sans-serif;
+            text-align: left;
+            margin: 0 auto; /* Centered horizontally */
+            max-width: 800px;
+            line-height: 1.6;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        .services h3 {
+            margin-top: 1rem; /* Adjusted top margin for better spacing */
+            color: white;
+        }
+        .services ul {
+            list-style-type: disc;
+            padding-left: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#about" onclick="showSection('about')">About</a></li>
+            <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" style="background-image: url('home.jpg');">
+        <div class="overlay">
+            <h1>Welcome to CincoLogic</h1>
+            <h2>Transforming businesses with cutting-edge technology.</h2>
+            
+        </div>
+    </section>
+
+    <section id="about" class="hidden" style="background-image: url('about.jpg');">
+        <div class="overlay">
+            <h2>Our Mission</h2>
+            <p class="mission">At CincoLogic, our mission is to help businesses grow by providing innovative IT solutions. We strive to deliver the highest quality products and services that exceed our clients' expectations.</p>
+        </div>
+        
+        <div class="services">
+            <h3>Services We Offer:</h3>
+            <ul>
+                <li>Custom web application development</li>
+                <li>Maintenance of existing applications</li>
+                <li>Optimization of slow-performing web applications and SQL</li>
+                <li>Dedicated IT resources at economical rates</li>
+                <li>Expertise in .NET, .NET Core, SQL Server, JavaScript, jQuery, Microsoft Azure, Web API, etc.</li>
+            </ul>
+        </div>
+    </section>
+
+<section id="contact" class="hidden" style="background-image: url('contact.jpg'); background-size: cover; background-position: center; color: #333; font-family: Arial, sans-serif;">
+    <div class="overlay" style="padding: 3rem; padding-left: 30%; /* Further increased left padding */">
+        <h2 style="color: #333;">Connect with Us</h2>
+        <p style="color: #333;">For any software development or maintenance requirement, please contact us at <br><br><a href="mailto:info@cincologic.co" style="color: #007BFF;">info@cincologic.co</a>.</p><br>
+        <p style="color: #333;">If you are looking for a job and have expertise in the latest technologies, please submit your resume to <br><br><a href="mailto:hr@cincologic.com" style="color: #007BFF;">hr@cincologic.com</a>.</p>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+    <footer>
+        <p>&copy; 2024 CincoLogic. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
