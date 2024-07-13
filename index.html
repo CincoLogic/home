@@ -61,6 +61,7 @@
         section {
             padding: 4rem 1rem; /* Increased padding for more space between sections */
             text-align: center;
+            overflow: hidden; /* Prevents horizontal scroll */
         }
         #home, #about, #contact {
             background-size: cover;
@@ -124,6 +125,19 @@
         }
         a:hover {
             color: #ffaa00; /* Darker shade for hover effect */
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            #home, #about, #contact {
+                padding: 3rem 0.5rem; /* Adjusted padding for smaller screens */
+            }
+            .services, .mission {
+                padding: 1rem; /* Adjusted padding for smaller screens */
+            }
+            #contact .overlay {
+                padding-left: 15%; /* Adjusted padding for smaller screens */
+            }
         }
     </style>
 </head>
