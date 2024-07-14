@@ -39,7 +39,6 @@
       "name": "CincoLogic",
       "url": "https://cincologic.com/",
       "logo": "URL to your logo",
-      
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+91-79-49390184",
@@ -51,61 +50,88 @@
     
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Additional inline styles for specific adjustments */
+        /* General Styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            color: #333; /* Dark gray text color */
+            background-color: #f8f9fa; /* Light gray background */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin: 0;
+        }
+        p {
+            margin: 0;
+        }
+        a {
+            color: #007BFF; /* Accent color */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         section {
-            padding: 4rem 1rem; /* Increased padding for more space between sections */
-            text-align: center;
-            overflow: hidden; /* Prevents horizontal scroll */
-        }
-        #home, #about, #contact {
-            background-size: cover;
-            background-position: center;
-            color: white;
-            position: relative;
-            text-align: center;
             padding: 4rem 1rem;
+            text-align: center;
+            overflow: hidden;
         }
-        #home h1, #home h2, #about h2, #about p, #contact h2, #contact p {
-            position: relative;
-            z-index: 1;
-        }
-        #home:before, #about:before, #contact:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
+
+        /* Navigation Styling */
+        nav {
+            background-color: #212529; /* Dark gray background */
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: fixed;
             width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 0;
+            top: 0;
+            z-index: 1000;
         }
-        #contact {
-            color: #333;
+        nav a {
+            color: white;
+            margin: 0 1rem;
         }
-        #contact .overlay {
-            padding: 3rem;
+
+        /* Home Section */
+        #home {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('home1.jpg') no-repeat center center/cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .mission {
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        #home h2 {
             font-size: 1.5rem;
+        }
+
+        /* About Section */
+        #about {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    color: white;
+    padding: 4rem 2rem;
+        }
+
+        #about h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        #about p {
+            font-size: 1.2rem;
             line-height: 1.6;
-            margin: 2rem auto;
-            max-width: 800px;
+            margin-bottom: 2rem;
         }
         .services {
             text-align: left;
             margin: 2rem auto;
             max-width: 800px;
             line-height: 1.6;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 1.5rem;
-            border-radius: 8px;
-            color: white;
         }
         .services h3 {
             margin-top: 1rem;
@@ -114,48 +140,94 @@
             list-style-type: disc;
             padding-left: 2rem;
         }
+
+        /* Contact Section */
+        #contact {
+            background-color: #212529; /* Dark gray background */
+            color: white;
+            padding: 4rem 2rem;
+        }
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 2rem;
+            text-align: left;
+        }
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .contact-info p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin: 0.5rem 0;
+        }
+        .contact-info a {
+            color: white;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .contact-map {
+            flex: 1;
+            min-width: 300px;
+            margin-left: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .contact-map iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            border: none;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 1rem;
-            background-color: #f1f1f1;
-            color: #333;
-        }
-        a {
-            color: #ffcc00; /* Changed link color to improve visibility */
-        }
-        a:hover {
-            color: #ffaa00; /* Darker shade for hover effect */
+            background-color: #f8f9fa; /* Light gray background */
+            color: #555; /* Dark gray text color */
         }
 
         /* Mobile Styles */
         @media (max-width: 768px) {
-            #home, #about, #contact {
-                padding: 3rem 0.5rem; /* Adjusted padding for smaller screens */
+            section {
+                padding: 3rem 1rem;
             }
-            .services, .mission {
-                padding: 1rem; /* Adjusted padding for smaller screens */
+            .contact-container {
+                flex-direction: column;
             }
-            #contact .overlay {
-                padding-left: 15%; /* Adjusted padding for smaller screens */
+            .contact-info, .contact-map {
+                margin: 1rem 0;
             }
         }
     </style>
 </head>
 <body>
 
-    <section id="home" style="background-image: url('home.jpg');">
-        <div class="overlay">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="home">
+        <div>
             <h1>Welcome to CincoLogic</h1>
             <h2>Transforming businesses with cutting-edge technology.</h2>
         </div>
     </section>
 
-    <section id="about" style="background-image: url('about.jpg');">
-        <div class="overlay">
-            <h2>Our Mission</h2>
-            <p class="mission">At CincoLogic, our mission is to help businesses grow by providing innovative IT solutions. We strive to deliver the highest quality products and services that exceed our clients' expectations.</p>
-        </div>
-        
+    <section id="about">
+        <h2>Our Mission</h2>
+        <p>At CincoLogic, our mission is to help businesses grow by providing innovative IT solutions. We strive to deliver the highest quality products and services that exceed our clients' expectations.</p>
         <div class="services">
             <h3>Services We Offer:</h3>
             <ul>
@@ -168,15 +240,20 @@
         </div>
     </section>
 
-    <section id="contact" style="background-image: url('contact.jpg');">
-        <div class="overlay" style="padding: 3rem; padding-left: 30%;">
-            <h2>Connect with Us</h2>
-            <p>For any software development or maintenance requirement, please contact us at</p>
-            <p><a href="mailto:info@cincologic.com">info@cincologic.com</a></p>
-            <p>If you are looking for a job and have expertise in the latest technologies, please submit your resume to</p>
-            <p><a href="mailto:hr@cincologic.com">hr@cincologic.com</a></p>
-            <p><b>Corporate Office</b> : C422, Siddhi Vinayak Complex, SG Highway, Ahmedabad, India, 380051</p>
-            <p><b>Tel</b> : +91 79-49390184</p>
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Connect With Us</h2>
+                <p><b>Call:</b> +91 79-49390184</p>
+                <p><b>Email - Sales Enquiry:</b> <a href="mailto:info@cincologic.com">info@cincologic.com</a></p>
+                <p><b>Email - Job Opportunity:</b> <a href="mailto:hr@cincologic.com">hr@cincologic.com</a></p>
+                <p><b>Location:</b> C422, Siddhi Vinayak Complex, SG Highway, Ahmedabad, India, 380051</p>
+            </div>
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3672.80593209177!2d72.4966304!3d22.9941628!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9ac2f8623323%3A0xc84338dfb6bdb047!2sSIDDHI%20VINAYAK%20TOWER%2C%20Kataria%20Automobiles%20Rd%2C%20Makarba%2C%20Ahmedabad%2C%20Gujarat%20380051!5e0!3m2!1sen!2sin!4v1720941827503!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+            </div>
         </div>
     </section>
 
@@ -184,6 +261,5 @@
         <p>&copy; 2024 CincoLogic. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
