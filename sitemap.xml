@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://cincologic.com/index.html</loc>
+		<loc>https://cincologic.com/</loc>
 		<priority>1.00</priority>
 	</url>
 	<url>
-		<loc>https://cincologic.com/about.html</loc>
+		<loc>https://cincologic.com/about</loc>
 		<priority>0.80</priority>
 	</url>
 	<url>
-		<loc>https://cincologic.com/services-we-offer.html</loc>
+		<loc>https://cincologic.com/services/services-we-offer</loc>
 		<priority>0.80</priority>
 	</url>
 	<url>
-		<loc>https://cincologic.com/front-end-technologies.html</loc>
+		<loc>https://cincologic.com/services/front-end-technologies</loc>
 		<priority>0.64</priority>
 	</url>
 	<url>
-		<loc>https://cincologic.com/back-end-technologies.html</loc>
+		<loc>https://cincologic.com/services/back-end-technologies</loc>
 		<priority>0.64</priority>
 	</url>
 	<url>
-		<loc>https://cincologic.com/cloud-technologies.html</loc>
+		<loc>https://cincologic.com/services/cloud-technologies</loc>
 		<priority>0.64</priority>
 	</url>
 	<url>
-		<loc>https://cincologic.com/careers.html</loc>
+		<loc>https://cincologic.com/careers</loc>
 		<priority>0.64</priority>
 	</url>
 	<url>
-		<loc>https://cincologic.com/contactus.html</loc>
+		<loc>https://cincologic.com/contactus</loc>
 		<priority>0.80</priority>
 	</url>
 </urlset>
