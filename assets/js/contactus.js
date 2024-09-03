@@ -53,7 +53,7 @@ $(function () {
                 message: tableHtml
             }),
             success: function (response) {
-                $('#success-message').text("Thank you for reaching out! We’ve received your message and will connect with you shortly.").show(); // Show the success message inside the box
+                $('#success-message').text("Thank you for reaching out! We've received your message and will connect with you shortly.").show(); // Show the success message inside the box
             },
             error: function (error) {
                 $('#success-message').html(
