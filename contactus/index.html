@@ -14,25 +14,23 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <!-- // meta tags for seo -->
-    <meta name="description" content="Looking for a reliable software development company in Ahmedabad, India? CincoLogic offers expert web, mobile, and custom software development services.">
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="Are you looking for a trusted tech partner in India? At CincoLogic, we’re passionate about creating innovative web, mobile, and custom software solutions that truly make a difference for your business. Let’s work together to take your ideas to the next level!">
     <meta name="keywords" content="Software Development, Ahmedabad, India, Web Development, Mobile App Development, Custom Software Solutions">
     <meta name="author" content="CincoLogic">
     <meta name="robots" content="index, follow">
 
-
-    <!-- // og tags for social media Optimization -->
-    <meta property="og:title" content="Top Software Development Company in Ahmedabad, India | CincoLogic">
-    <meta property="og:description" content="Looking for a reliable software development company in Ahmedabad, India? CincoLogic offers expert web, mobile, and custom software development services.">
+    <!-- Open Graph Meta Tags for Social Media Optimization -->
+    <meta property="og:title" content="Top Software Development Company in India | CincoLogic">
+    <meta property="og:description" content="Are you looking for a trusted tech partner in India? At CincoLogic, we’re passionate about creating innovative web, mobile, and custom software solutions that truly make a difference for your business. Let’s work together to take your ideas to the next level!">
     <meta property="og:url" content="https://cincologic.com/">
     <meta property="og:image" content="https://cincologic.com/images/CincologicBanner.png">
     <meta property="og:type" content="website">
 
-
-    <!-- // twitter card tags fo rsocial media optimization -->
-    <meta na me="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Top Software Development Company in Ahmedabad, India | CincoLogic">
-    <meta name="twitter:description" content="Looking for a reliable software development company in Ahmedabad, India? CincoLogic offers expert web, mobile, and custom software development services.">
+    <!-- Twitter Card Meta Tags for Social Media Optimization -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Top Software Development Company in India | CincoLogic">
+    <meta name="twitter:description" content="Are you looking for a trusted tech partner in India? At CincoLogic, we’re passionate about creating innovative web, mobile, and custom software solutions that truly make a difference for your business. Let’s work together to take your ideas to the next level!">
     <meta name="twitter:image" content="https://cincologic.com/images/CincologicBanner.png">
 
     <!-- // for seo -->
@@ -177,12 +175,6 @@
                             <a href="/"><img src="../images/CINCO_GreyRemove.png" alt="CincoLogic"></a>
                         </div>
                     </div>
-                    <!-- <div class="text">
-        <a href="index.html">
-            <h1>Cincologic</h1>
-        </a>
-    </div> -->
-                    <!-- Menu -->
                     <nav id="menu" class="bt-border-zero">
                         <ul>
                             <li><a href="/">Home</a></li>
@@ -205,7 +197,7 @@
                 </div>
             </div>
             <footer id="footer">
-                <p class="copyright">&copy; CincoLogic All rights reserved.
+                <p class="copyright">&copy; CincoLogic All rights reserved.</p>
             </footer>
         </div>
     </div>
@@ -215,84 +207,8 @@
     <script src="../assets/js/breakpoints.min.js"></script>
     <script src="../assets/js/util.js"></script>
     <script src="../assets/js/main.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#contact-form').on('submit', function (e) {
-                e.preventDefault(); // Prevent form submission
-
-                // Clear previous error and success messages
-                $('#email-error').text('');
-                $('#error-message').hide();
-                $('#success-message').hide();
-
-                // Validate email
-                var email = $('#demo-email').val();
-                if (!email || !validateEmail(email)) {
-                    $('#email-error').text('Please enter a valid email address.');
-                    return;
-                }
-
-                let name = $('#demo-name').val();
-                let phone = $('#phone').val();
-                let message = $('#demo-message').val();
-
-                var tableHtml = `
-                                                         <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">
-                                                             <tr>
-                                                                 <td style="width: 30%; font-family: Arial, sans-serif;">Name</td>
-                                                                 <td style="width: 70%; font-family: Arial, sans-serif;">${name}</td>
-                                                             </tr>
-                                                             <tr>
-                                                                 <td style="font-family: Arial, sans-serif;">Email</td>
-                                                                 <td style="font-family: Arial, sans-serif;">${email}</td>
-                                                             </tr>
-                                                             <tr>
-                                                                 <td style="font-family: Arial, sans-serif;">Phone</td>
-                                                                 <td style="font-family: Arial, sans-serif;">${phone}</td>
-                                                             </tr>
-                                                             <tr>
-                                                                 <td style="font-family: Arial, sans-serif;">Message</td>
-                                                                 <td style="font-family: Arial, sans-serif;">${message}</td>
-                                                             </tr>
-                                                         </table>`;
-
-
-                // Show the spinner and hide the form
-                $('#spinner').show();
-                $('#contact-form').hide();
-
-
-                // If email is valid, proceed with the AJAX request
-                $.ajax({
-                    url: 'https://cincositemail-chbfcxakbtehduep.westeurope-01.azurewebsites.net/EmailService',  // Replace with your API endpoint
-                    type: 'POST',
-                    contentType: 'application/json',
-                    data: JSON.stringify({
-                        message: tableHtml
-                    }),
-                    success: function (response) {
-                        $('#success-message').text("Thank you for reaching out! We’ve received your message and will connect with you shortly.").show(); // Show the success message inside the box
-                    },
-                    error: function (error) {
-                        $('#success-message').html(
-                            'Oops, it seems we are currently unable to send your message. <br>' +
-                            'Please email us at <a href="mailto:info@cincologic.com">info@cincologic.com</a>. ' +
-                            'Apologies for the inconvenience.'
-                        ).show();
-                    },
-                    complete: function (xhr, status) {
-                        // $('#contact-form').hide(); // Hide the formrt
-                        $('#spinner').hide(); // Hide the spinner
-                    }
-                });
-            });
-
-            function validateEmail(email) {
-                var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return re.test(email);
-            }
-        });
-    </script>
+    <script src="../assets/js/contactus.js"></script>
+    
     <!-- Spinner -->
     <div id="spinner" style="display: none;">
         <img src="../images/Rolling@1x-1.0s-200px-200px.gif" alt="Loading...">
